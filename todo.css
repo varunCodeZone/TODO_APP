@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.input-section input,
+.input-section button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#dateInput {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    font-weight: bold;
+    min-width: 200px;
+}
+
+#dateInput::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+#dateInput::placeholder {
+    color: rgba(255,255,255,0.8);
+}
+
+#todoInput {
+    background: white;
+    border: 2px solid #e0e0e0;
+    flex: 2;
+}
+
+#todoInput:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+#addBtn {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+#addBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(79, 172, 254, 0.4);
+}
+
+#todoList {
+    list-style: none;
+}
+
+#todoList li {
+    background: #f8f9ff;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+#todoList li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#todoList li span:first-child {
+    font-size: 18px;
+    color: #333;
+    flex: 1;
+}
+
+#todoList li small {
+    color: #888;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+.delete {
+    background: #ff6b6b;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.delete:hover {
+    background: #ff5252;
+    transform: scale(1.1);
+}
+
+.empty-state {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 40px;
+}
+
+@media (max-width: 480px) {
+    .input-section {
+        flex-direction: column;
+    }
+    
+    #dateInput, #todoInput, #addBtn {
+        width: 100%;
+    }
+}

@@ -10,7 +10,7 @@
 
 ## 🎯 **Demo**
 
-
+![desktop view](Todo.png)
 
 
 
